@@ -21,7 +21,7 @@ export class TodosComponent implements OnInit {
     this.todoService.getTodos().subscribe({
       next: (todos) => {
         console.log(todos);
-        this.todos = todos;
+        this.todos = todos.result;
 
         for (let i = 0; i < todos.length; i++) {
           this.editMode.push(false);
